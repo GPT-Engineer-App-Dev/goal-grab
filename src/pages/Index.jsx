@@ -4,7 +4,11 @@ import { Box, Input, Button, List, ListItem, IconButton, Checkbox, Text, Flex } 
 import { FaPlus, FaTrash } from "react-icons/fa";
 
 const Index = () => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([
+    { id: Date.now(), text: "Buy groceries", isCompleted: false },
+    { id: Date.now() + 1, text: "Walk the dog", isCompleted: false },
+    { id: Date.now() + 2, text: "Read a book", isCompleted: false },
+  ]);
   const [input, setInput] = useState("");
 
   const handleAddTask = () => {
